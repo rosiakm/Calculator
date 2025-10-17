@@ -21,7 +21,7 @@ public class CalculatorTest extends BaseTest {
     }
 
     @ParameterizedTest(name = "Multiplying: {1} * {2} = {0}")
-    @CsvFileSource(resources = "/TestData/multiplyData")
+    @CsvFileSource(resources = "/TestData/multiplyData.csv")
     public void multiplyTest(double expected, double a, double b){
         assertEquals(expected, calculator.multiply(a,b), DELTA);
     }
@@ -29,7 +29,7 @@ public class CalculatorTest extends BaseTest {
     @ParameterizedTest(name = "Dividing: {1} / {2} = {0}")
     @CsvFileSource(resources = "/TestData/divisionData.csv")
     public void divideTest(double expected, double a, double b){
-        assertEquals(expected, calculator.divide(a,b), DELTA);
+        assertEquals(expected, calculator.divide(a,b));
     }
 
     @Test
