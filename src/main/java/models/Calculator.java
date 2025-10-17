@@ -26,6 +26,7 @@ public class Calculator {
             logger.info("The arithmetic exception has been thrown");
             throw new ArithmeticException("The divisor equals 0");
         }
+
         logger.info("I am dividing: {} and {}", a, b);
         return a/b;
     }
